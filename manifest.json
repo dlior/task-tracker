@@ -1,0 +1,13 @@
+{
+  "manifest_version": 3,
+  "name": "Task Tracker",
+  "version": "0.1.0",
+  "description": "Track your tasks with Google Firebase.",
+  "icons": {
+    "48": "logo.png"
+  },
+  "action": {
+    "default_title": "Task Tracker",
+    "default_popup": "index.html"
+  }
+}
