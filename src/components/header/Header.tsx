@@ -1,7 +1,7 @@
 import { Flex } from '@chakra-ui/react';
 
 import { LogoIcon } from '../icons/LogoIcon';
-import CreateTaskForm from '../tasks/CreateTaskForm';
+import CreateTaskForm from '../tasks/task-form/CreateTaskForm';
 
 const Header = () => {
   return (
