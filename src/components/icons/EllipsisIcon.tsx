@@ -1,7 +1,7 @@
 import { createIcon } from '@chakra-ui/react';
 
-export const HorizontalEllipsisIcon = createIcon({
-  displayName: 'EllipsisHorizontalIcon',
+export const EllipsisIcon = createIcon({
+  displayName: 'EllipsisIcon',
   viewBox: '0 0 64 16',
   path: [
     <circle cx='8' cy='8' r='4' fill='#000' />,

@@ -1,7 +1,7 @@
 import { Flex } from '@chakra-ui/react';
 
 import { LogoIcon } from '../icons/LogoIcon';
-import CreateTaskForm from '../tasks/task-form/CreateTaskForm';
+import TaskForm from '../tasks/TaskForm';
 
 const Header = () => {
   return (
@@ -20,7 +20,7 @@ const Header = () => {
       alignItems='center'
     >
       <LogoIcon boxSize='32px' bgColor='gray.800' />
-      <CreateTaskForm />
+      <TaskForm />
     </Flex>
   );
 };

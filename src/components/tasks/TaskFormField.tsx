@@ -6,9 +6,9 @@ import {
   Stack,
 } from '@chakra-ui/react';
 
-import { Task } from '../../../models';
+import { Task } from '../../models';
 
-const TaskForm: React.FC<{
+const TaskFormField: React.FC<{
   task: Partial<Task>;
   fieldName: 'title' | 'description' | 'dueDate' | 'setReminder';
   onFieldChange: (task: Partial<Task>) => void;
@@ -44,4 +44,4 @@ const TaskForm: React.FC<{
   );
 };
 
-export default TaskForm;
+export default TaskFormField;

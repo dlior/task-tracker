@@ -16,11 +16,11 @@ import {
   useToast,
 } from '@chakra-ui/react';
 
-import { initialTaskState, Task } from '../../../models';
-import { DatabaseService } from '../../../services';
-import TaskForm from './TaskForm';
+import { initialTaskState, Task } from '../../models';
+import { DatabaseService } from '../../services';
+import TaskFormField from './TaskFormField';
 
-const CreateTaskForm = () => {
+const TaskForm = () => {
   const [task, setTask] = useState<Partial<Task>>(initialTaskState);
 
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -82,7 +82,7 @@ const CreateTaskForm = () => {
           <DrawerBody>
             <Stack spacing='6'>
               {Object.values(FieldName).map((fieldName) => (
-                <TaskForm
+                <TaskFormField
                   key={fieldName}
                   task={task}
                   fieldName={fieldName}
@@ -107,4 +107,4 @@ const CreateTaskForm = () => {
   );
 };
 
-export default CreateTaskForm;
+export default TaskForm;

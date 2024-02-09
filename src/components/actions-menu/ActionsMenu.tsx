@@ -8,7 +8,7 @@ import {
 } from '@chakra-ui/react';
 
 import { DatabaseService } from '../../services';
-import { HorizontalEllipsisIcon } from '../icons/HorizontalEllipsisIcon';
+import { EllipsisIcon } from '../icons/EllipsisIcon';
 
 const databaseService = DatabaseService.instance;
 
@@ -28,9 +28,8 @@ const Actions: React.FC<{ taskId: string }> = ({ taskId }) => {
       <MenuButton
         as={IconButton}
         isRound
-        icon={<HorizontalEllipsisIcon />}
+        icon={<EllipsisIcon />}
         variant='solid'
-        colorScheme='black'
       />
       <MenuList>
         <MenuItem
