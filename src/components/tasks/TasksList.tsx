@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 
-import { Center, Spinner, Stack } from '@chakra-ui/react';
+import { Center, Spinner, Stack, Text } from '@chakra-ui/react';
 
 import { Task } from '../../models';
 import { DatabaseService } from '../../services';
@@ -10,10 +10,12 @@ const databaseService = DatabaseService.instance;
 
 const TasksList = () => {
   const [tasks, setTasks] = useState<Task[]>([]);
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     const unsubscribe = databaseService.getTasks((tasks) => {
       setTasks(tasks);
+      setIsLoading(false);
     });
 
     return () => unsubscribe && unsubscribe();
@@ -26,7 +28,13 @@ const TasksList = () => {
           tasks.map((task) => <TaskItem key={task.id} task={task} />)
         ) : (
           <Center my='50%'>
-            <Spinner size='xl' />
+            {isLoading ? (
+              <Spinner size='xl' />
+            ) : (
+              <Text as='b' fontSize='large'>
+                There're no tasks!
+              </Text>
+            )}
           </Center>
         )}
       </Stack>
